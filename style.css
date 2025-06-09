@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #222;
+  background: #34495e;
   padding: 10px 20px;
   display: flex;
   justify-content: center;
@@ -297,7 +297,8 @@ footer {
     padding: 20px;
     margin-top: 40px;
     font-size: 0.9rem;
-    color: #777;
+    color: #f3f3f3;
+    background-color: #34495e;
 }
 
 

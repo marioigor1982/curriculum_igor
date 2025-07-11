@@ -1,45 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Meu Currículo Profissional</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      /* Estilo básico do menu fixo no topo */
-      .menu-topo {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: #222;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-      }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currículo Mario Igor de Jesus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Estilo básico do menu fixo no topo */
+    .menu-topo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #34495e;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
 
-      .menu-topo a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1rem;
-        transition: color 0.3s ease;
-      }
+    .menu-topo a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
 
-      .menu-topo a:hover {
-        color: #4caf50; /* cor hover */
-      }
+    .menu-topo a:hover {
+      color: #4caf50;
+      /* cor hover */
+    }
 
-      /* Para evitar que o conteúdo fique escondido atrás do menu fixo */
-      body {
-        padding-top: 60px; /* altura do menu + margem */
-      }
-    </style>
+    /* Para evitar que o conteúdo fique escondido atrás do menu fixo */
+    body {
+      padding-top: 60px;
+      /* altura do menu + margem */
+    }
+  </style>
+  <div class="theme-switcher no-print">
+    <button onclick="setTheme('theme-light')">Claro</button>
+    <button onclick="setTheme('theme-dark')">Escuro</button>
+  </div>
+
+
 </head>
+<script>
+  function setTheme(themeName) {
+    document.body.classList.remove('theme-light', 'theme-dark');
+    document.body.classList.add(themeName);
+    localStorage.setItem('selectedTheme', themeName);
+  }
+
+  // Carregar o tema salvo ao carregar a página
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem('selectedTheme') || 'theme-light';
+    setTheme(savedTheme);
+  });
+</script>
 
 <body>
   <!-- Menu fixo no topo -->
@@ -52,12 +74,8 @@
 
   <!-- Botões Flutuantes -->
   <div class="floating-buttons no-print">
-    <a
-      href="https://wa.me/5562991619560?text=Ol%C3%A1%20Igor%2C%20acabei%20de%20acessar%20seu%20curr%C3%ADculo!"
-      target="_blank"
-      class="float-btn whatsapp-btn"
-      title="Fale pelo WhatsApp"
-    >
+    <a href="https://wa.me/5511940050060?text=Ol%C3%A1%20Igor%2C%20acabei%20de%20acessar%20seu%20curr%C3%ADculo!"
+      target="_blank" class="float-btn whatsapp-btn" title="Fale pelo WhatsApp">
       <img src="img/whatsapp.png" alt="WhatsApp" />
     </a>
 
@@ -76,17 +94,29 @@
             <i class="fas fa-user"></i>
           </div>
           <h2>Mario Igor de Jesus</h2>
-          <p>Desenvolvedor Full Stack</p>
+          <p>Analista Pleno</p>
         </div>
 
         <div class="contact-info">
           <h3>Contato</h3>
           <ul>
-            <li><i class="fas fa-phone"></i> (62) 99161-9560</li>
-            <li><i class="fas fa-envelope"></i> mario.igor1982@gmail.com </li>
-            <li><i class="fab fa-linkedin"></i> linkedin.com/in/marioigor82 </li>
-            <li><i class="fab fa-github"></i> github.com/marioigor1982 </li>
-            <li><i class="fas fa-map-marker-alt"></i> Anápolis, GO </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+5511940050060">(11) 94005-0060</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:mario.igor1982@gmail.com">mario.igor1982@gmail.com</a>
+            </li>
+            <li>
+              <i class="fab fa-linkedin"></i>
+              <a href="www.linkedin.com/in/marioigor82" target="_blank">linkedin.com/in/marioigor82</a>
+            </li>
+            <li>
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/marioigor1982" target="_blank">github.com/marioigor1982</a>
+            </li>
+            <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP </li>
           </ul>
         </div>
 
@@ -165,11 +195,16 @@
         <div class="section about" id="sobre">
           <h3 class="section-title">Sobre</h3>
           <p>
-            Desenvolvedor Full Stack com mais de 5 anos de experiência na criação de
-            aplicações web escaláveis e de alto desempenho. Especializado em JavaScript,
-            React e Node.js, com forte capacidade de resolver problemas e trabalhar em equipe.
-          </p>
-          <p>
+            Olá! Eu me chamo Igor e estou atualmente em uma emocionante imersão e aprendizado para o mundo da
+            programação. Meu objetivo é me tornar um desenvolvedor Front-end dedicado e eficiente.
+
+            Tenho uma paixão por resolver problemas e acredito firmemente que a programação é uma das maneiras mais
+            eficazes de fazer isso no mundo moderno. Atualmente, estou aprimorando minhas habilidades em HTML, CSS e
+            JavaScript, com o objetivo de criar interfaces de usuário intuitivas e responsivas.
+
+            Estou ansioso para aplicar meu aprendizado em um ambiente profissional. Adoraria conectar-me com outros
+            profissionais da área, então sinta-se à vontade para entrar em contato!
+
             Busco oportunidades desafiadoras onde possa aplicar minhas habilidades técnicas
             e criativas para desenvolver soluções inovadoras que agreguem valor aos usuários
             e à empresa.
@@ -180,144 +215,181 @@
           <h3 class="section-title">Experiência Profissional</h3>
 
           <div class="experience-item">
-            <div class="job-title">Desenvolvedor Full Stack Sênior</div>
-            <div class="company">Tech Solutions Ltda</div>
-            <div class="date">Janeiro 2020 - Presente</div>
+            <div class="job-title">Analista pleno</div>
+            <div class="company">Accenture</div>
+            <div class="date">Dezembro 2019 - Presente</div>
             <div class="description">
-              <p>
-                Liderança no desenvolvimento de aplicações web utilizando React, Node.js e MongoDB.
-                Implementação de arquitetura de microsserviços que melhorou o tempo de resposta em 40%.
-              </p>
-              <p>
-                Mentoria de desenvolvedores juniores e realização de code reviews para garantir qualidade
-                do código.
-              </p>
+              <p class="justify-content">
+                Abertura de chamados para solução de problemas sistêmicos, acompanhamento e follow up, controle de
+                padrão
+                contábil (Contas de pagamentos/ ressarcimento de clientes), gestão de problemas críticos em sistema,
+                elaboração de planilhas e ferramentas de controle de dados sensíveis, análise de contratos novos ou
+                tombados via sistema, baixas de pagamentos via ocorrência e apoio às demais áreas do crédito
+                imobiliário.
+                Atuação e análise em processos de Pós contratação como baixas de parcelas e liquidação de contratos e
+                acordos via escritório jurídico juntamente ao BPO.
+                <br>
+              <br><div class="job-title">Analista Jr.</div>
+              <div class="company">Accenture</div>
+              <div class="description">
+                <p class="justify-content">
+                   Crédito Imobiliário e Financiamento, com atividades que fazem parte do processo de originação e
+                  administração, como por exemplo: análise de documentação, atividades de retomada, análise jurídica e
+                  pós-vendas.
+                </p>
+
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="job-title">Auxiliar de Logística</div>
+              <div class="company">Rodoviário Teixeira</div>
+              <div class="date">Março 2018 - Novembro 2018</div>
+              <div class="description">
+                <p class="justify-content">
+                  Controles de recebimentos e carregamentos de produtos alimentícios, controle de validade, carregamento
+                  e descarga de produtos. Controle de estoque, relatórios de fluxo de movimentação de materiais.
+                  Responsável pelo Cross Docking da empresa.
+                </p>
+
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="job-title">Conferente</div>
+              <div class="company">Praiana Distribuidora de Bebidas</div>
+              <div class="date">Dezembro 2014 - Abril 2016</div>
+              <div class="description">
+                <p class="justify-content">
+                  Controle de carregamento e descarregamento, romaneio de transporte, emissão de
+                  notas fiscais, controle de entrada e saída de mercadorias, lançamento de dados
+                  pertinentes à movimentação diária de produtos, relatórios de apoio ao estoque em
+                  terceiros, contagem de mercadorias, otimização de espaço no estoque, relatórios
+                  financeiros de custo de mercadorias.
+                </p>
+
+              </div>
             </div>
           </div>
 
-          <div class="experience-item">
-            <div class="job-title">Desenvolvedor Front-end</div>
-            <div class="company">InovaWeb Sistemas</div>
-            <div class="date">Março 2018 - Dezembro 2019</div>
-            <div class="description">
-              <p>
-                Desenvolvimento de interfaces responsivas utilizando React, Redux e Sass. Otimização de
-                performance que reduziu o tempo de carregamento em 30%.
-              </p>
-              <p>
-                Implementação de testes automatizados com Jest e React Testing Library.
-              </p>
+          <div class="section education" id="formacao">
+            <h3 class="section-title">Formação Acadêmica</h3>
+
+            <div class="education-item">
+              <div class="degree">Bacharelado em Ciência da Computação</div>
+              <div class="school">Universidade de São Paulo (USP)</div>
+              <div class="date">2012 - 2016</div>
+              <div class="description">
+                <p>
+                  TCC: "Otimização de algoritmos de aprendizado de máquina para análise de dados em tempo real"
+                </p>
+              </div>
+            </div>
+
+            <div class="education-item">
+              <div class="degree">Pós-graduação em Desenvolvimento Web Full Stack</div>
+              <div class="school">Instituto de Tecnologia</div>
+              <div class="date">2017 - 2018</div>
             </div>
           </div>
 
-          <div class="experience-item">
-            <div class="job-title">Desenvolvedor Web Júnior</div>
-            <div class="company">Digital Creatives</div>
-            <div class="date">Junho 2016 - Fevereiro 2018</div>
-            <div class="description">
+          <div class="section projects" id="projetos">
+            <h3 class="section-title">Projetos</h3>
+
+            <div class="project-card">
+              <div class="project-title">Sistema de Gerenciamento de Tarefas</div>
               <p>
-                Desenvolvimento de websites e aplicações web usando HTML5, CSS3 e JavaScript.
-                Implementação de designs responsivos com foco em experiência do usuário.
+                Aplicação web completa com autenticação de usuário, CRUD de tarefas e dashboard analítico.
               </p>
+              <div class="project-links">
+                <a href="#"><i class="fab fa-github"></i> Código</a>
+                <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">Plataforma de E-commerce</div>
               <p>
-                Integração com APIs RESTful e manutenção de sites existentes.
+                Loja virtual com carrinho de compras, pagamentos integrados e sistema de recomendações.
               </p>
+              <div class="project-links">
+                <a href="#"><i class="fab fa-github"></i> Código</a>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="section education" id="formacao">
-          <h3 class="section-title">Formação Acadêmica</h3>
-
-          <div class="education-item">
-            <div class="degree">Bacharelado em Ciência da Computação</div>
-            <div class="school">Universidade de São Paulo (USP)</div>
-            <div class="date">2012 - 2016</div>
-            <div class="description">
+            <div class="project-card">
+              <div class="project-title">App de Previsão do Tempo</div>
               <p>
-                TCC: "Otimização de algoritmos de aprendizado de máquina para análise de dados em tempo real"
+                Aplicativo mobile com geolocalização e previsões meteorológicas em tempo real.
               </p>
-            </div>
-          </div>
-
-          <div class="education-item">
-            <div class="degree">Pós-graduação em Desenvolvimento Web Full Stack</div>
-            <div class="school">Instituto de Tecnologia</div>
-            <div class="date">2017 - 2018</div>
-          </div>
-        </div>
-
-        <div class="section projects" id="projetos">
-          <h3 class="section-title">Projetos</h3>
-
-          <div class="project-card">
-            <div class="project-title">Sistema de Gerenciamento de Tarefas</div>
-            <p>
-              Aplicação web completa com autenticação de usuário, CRUD de tarefas e dashboard analítico.
-            </p>
-            <div class="project-links">
-              <a href="#"><i class="fab fa-github"></i> Código</a>
-              <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-title">Plataforma de E-commerce</div>
-            <p>
-              Loja virtual com carrinho de compras, pagamentos integrados e sistema de recomendações.
-            </p>
-            <div class="project-links">
-              <a href="#"><i class="fab fa-github"></i> Código</a>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-title">App de Previsão do Tempo</div>
-            <p>
-              Aplicativo mobile com geolocalização e previsões meteorológicas em tempo real.
-            </p>
-            <div class="project-links">
-              <a href="#"><i class="fab fa-github"></i> Código</a>
-              <a href="#"><i class="fab fa-google-play"></i> Play Store</a>
+              <div class="project-links">
+                <a href="#"><i class="fab fa-github"></i> Código</a>
+                <a href="#"><i class="fab fa-google-play"></i> Play Store</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="container">
+  <!-- todo o conteúdo -->
+</div>
+
+<div class="container">
+  <!-- todo o conteúdo -->
+</div>
+
+<footer>
+  <p>Desenvolvido por Mario Igor de Jesus® com HTML e CSS, Junho 2025</p>
+</footer>
+
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const updateDateElement = document.getElementById("update-date");
+          const months = [
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro",
+          ];
+
+          const now = new Date();
+          const month = months[now.getMonth()];
+          const year = now.getFullYear();
+
+          if (updateDateElement) {
+            updateDateElement.textContent = `${month} ${year}`;
+          }
+        });
+      </script>
     </div>
-
-    <footer>
-      <p>
-        Desenvolvido por Mario Igor de Jesus® com HTML e CSS,<span id="update-date"></span>
-      </p>
-    </footer>
-
+    <div class="theme-switcher no-print">
+      <button onclick="setTheme('theme-light')">Claro</button>
+      <button onclick="setTheme('theme-dark')">Escuro</button>
+    </div>
     <script>
+      function setTheme(themeName) {
+        document.body.classList.remove('theme-light', 'theme-dark');
+        document.body.classList.add(themeName);
+        localStorage.setItem('selectedTheme', themeName);
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
-        const updateDateElement = document.getElementById("update-date");
-        const months = [
-          "Janeiro",
-          "Fevereiro",
-          "Março",
-          "Abril",
-          "Maio",
-          "Junho",
-          "Julho",
-          "Agosto",
-          "Setembro",
-          "Outubro",
-          "Novembro",
-          "Dezembro",
-        ];
-
-        const now = new Date();
-        const month = months[now.getMonth()];
-        const year = now.getFullYear();
-
-        if (updateDateElement) {
-          updateDateElement.textContent = `${month} ${year}`;
-        }
+        const savedTheme = localStorage.getItem('selectedTheme') || 'theme-light';
+        setTheme(savedTheme);
       });
     </script>
-  </div>
+
+
 </body>
+
 </html>

@@ -214,35 +214,37 @@
         <div class="section experience" id="experiencia">
           <h3 class="section-title">Experiência Profissional</h3>
 
-          <div class="experience-item">
-            <div class="job-title">Analista pleno</div>
-            <div class="company">Accenture</div>
-            <div class="date">Dezembro 2019 - Presente</div>
-            <div class="description">
-              <p class="justify-content">
-                Abertura de chamados para solução de problemas sistêmicos, acompanhamento e follow up, controle de
-                padrão
-                contábil (Contas de pagamentos/ ressarcimento de clientes), gestão de problemas críticos em sistema,
-                elaboração de planilhas e ferramentas de controle de dados sensíveis, análise de contratos novos ou
-                tombados via sistema, baixas de pagamentos via ocorrência e apoio às demais áreas do crédito
-                imobiliário.
-                Atuação e análise em processos de Pós contratação como baixas de parcelas e liquidação de contratos e
-                acordos via escritório jurídico juntamente ao BPO.
-                <br>
-              <br><div class="job-title">Analista Jr.</div>
+                      <div class="experience-item">
+              <div class="job-title">Analista Pleno</div>
               <div class="company">Accenture</div>
+              <div class="date">Dezembro 2019 - Presente</div>
               <div class="description">
                 <p class="justify-content">
-                   Crédito Imobiliário e Financiamento, com atividades que fazem parte do processo de originação e
-                  administração, como por exemplo: análise de documentação, atividades de retomada, análise jurídica e
-                  pós-vendas.
+                  Abertura de chamados para solução de problemas sistêmicos, acompanhamento e follow up, controle de
+                  padrão contábil (Contas de pagamentos/ ressarcimento de clientes), gestão de problemas críticos em sistema,
+                  elaboração de planilhas e ferramentas de controle de dados sensíveis, análise de contratos novos ou
+                  tombados via sistema, baixas de pagamentos via ocorrência e apoio às demais áreas do crédito
+                  imobiliário. Atuação e análise em processos de Pós contratação como baixas de parcelas e liquidação de contratos e
+                  acordos via escritório jurídico juntamente ao BPO.
                 </p>
-
               </div>
             </div>
 
             <div class="experience-item">
-              <div class="job-title">Auxiliar de Logística</div>
+              <div class="job-title">Analista Jr.</div>
+              <div class="company">Accenture</div>
+              <div class="date">2017 - 2019</div>
+              <div class="description">
+                <p class="justify-content">
+                  Crédito Imobiliário e Financiamento, com atividades que fazem parte do processo de originação e
+                  administração, como por exemplo: análise de documentação, atividades de retomada, análise jurídica e
+                  pós-vendas.
+                </p>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="job-title">Auxiliar de Transporte</div>
               <div class="company">Rodoviário Teixeira</div>
               <div class="date">Março 2018 - Novembro 2018</div>
               <div class="description">
@@ -297,7 +299,7 @@
             <h3 class="section-title">Projetos</h3>
 
             <div class="project-card">
-              <div class="project-title">Sistema de Gerenciamento de Tarefas</div>
+              <div class="project-title">Site</div>
               <p>
                 Aplicação web completa com autenticação de usuário, CRUD de tarefas e dashboard analítico.
               </p>
@@ -327,68 +329,66 @@
                 <a href="#"><i class="fab fa-google-play"></i> Play Store</a>
               </div>
             </div>
+
+            <div class="project-card">
+              <div class="project-title">Calculadora</div>
+              <p>
+                Calculadora web desenvolvida com HTML, CSS e JavaScript, oferecendo funcionalidades básicas de cálculo com interface intuitiva.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/marioigor1982/calculadora_simples" target="_blank"><i class="fab fa-github"></i> Código</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="container">
-  <!-- todo o conteúdo -->
-</div>
-
-<div class="container">
-  <!-- todo o conteúdo -->
-</div>
-
-<footer>
-  <p>Desenvolvido por Mario Igor de Jesus® com HTML e CSS, Junho 2025</p>
-</footer>
-
-
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const updateDateElement = document.getElementById("update-date");
-          const months = [
-            "Janeiro",
-            "Fevereiro",
-            "Março",
-            "Abril",
-            "Maio",
-            "Junho",
-            "Julho",
-            "Agosto",
-            "Setembro",
-            "Outubro",
-            "Novembro",
-            "Dezembro",
-          ];
-
-          const now = new Date();
-          const month = months[now.getMonth()];
-          const year = now.getFullYear();
-
-          if (updateDateElement) {
-            updateDateElement.textContent = `${month} ${year}`;
-          }
-        });
-      </script>
     </div>
-    <div class="theme-switcher no-print">
-      <button onclick="setTheme('theme-light')">Claro</button>
-      <button onclick="setTheme('theme-dark')">Escuro</button>
-    </div>
-    <script>
-      function setTheme(themeName) {
-        document.body.classList.remove('theme-light', 'theme-dark');
-        document.body.classList.add(themeName);
-        localStorage.setItem('selectedTheme', themeName);
+  </div>
+
+  <footer>
+    <p>Desenvolvido por Mario Igor de Jesus® com HTML e CSS, Junho 2025</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const updateDateElement = document.getElementById("update-date");
+      const months = [
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro",
+      ];
+
+      const now = new Date();
+      const month = months[now.getMonth()];
+      const year = now.getFullYear();
+
+      if (updateDateElement) {
+        updateDateElement.textContent = `${month} ${year}`;
       }
+    });
+  </script>
 
-      document.addEventListener("DOMContentLoaded", () => {
-        const savedTheme = localStorage.getItem('selectedTheme') || 'theme-light';
-        setTheme(savedTheme);
-      });
-    </script>
+  <script>
+    function setTheme(themeName) {
+      document.body.classList.remove('theme-light', 'theme-dark');
+      document.body.classList.add(themeName);
+      localStorage.setItem('selectedTheme', themeName);
+    }
 
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem('selectedTheme') || 'theme-light';
+      setTheme(savedTheme);
+    });
+  </script>
 
 </body>
 
